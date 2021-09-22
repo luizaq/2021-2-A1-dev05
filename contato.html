@@ -13,7 +13,7 @@
     
 
     <!-- Bootstrap core CSS -->
-<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -30,7 +30,7 @@
         }
       }
     </style>
-
+    <script src="assets/valida-cadstro.js"></script>
     
     <!-- Custom styles for this template -->
     <link href="assets/form-validation.css" rel="stylesheet">
@@ -52,26 +52,30 @@
     <div class="row g-5">
       <div class="col-md-5 col-lg-4 order-md-last">
         <h4 class="d-flex justify-content-between align-items-center mb-3"></h4>
-        
+        <!--ISso aqui fica ao lado , coluna2-->
       </div>
       
 
       <div class="col-md-7 col-lg-8">
-        <h4 class="mb-3">Cadastrp</h4>
-        <h5 class="mb-3">Deseja salvar seu cadastro?</h5>
-        <p class="text-muted">Salvando seu cadastro podera utilizar nosso fórum e acompanhar seu pedido.</p>
-        
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="same-address">
-          <label class="form-check-label" for="same-address">Salvar</label>
-        </div>
-        <!--pede user e senha-->
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="save-info">
-          <label class="form-check-label" for="save-info">Não salvar</label>
-        </div>
-        <!--vida que segue-->
-
+        <h4 class="mb-3">Cadastro</h4>
+       <form name= "salvar">
+          <h5 class="mb-3">Deseja salvar seu cadastro?</h5>
+          <p class="text-muted">Salvando seu cadastro podera utilizar nosso fórum e acompanhar seu pedido.</p>
+          
+          <div class="form-check"  method ="post">
+            <input type="radio" class="form-check-input" name="RadioCadastro" id="cadastro"/>
+            <label class="form-check-label" >Salvar</label>
+          </div>
+          <!--pede user e senha-->
+          <div class="form-check">
+            <input type="radio" class="form-check-input" id="no-cadastro" name="RadioCadastro"/>
+            <label class="form-check-label" >Não salvar</label>
+          </div>
+          <!--vida que segue-->
+          <!--ajustar espaco-->
+          <button type="button" value="aa" class="btn btn-dark" onclick="check()">salvar</button>
+          <p id ="ccc"></p>
+      </form>
         <form class="needs-validation" novalidate>
           <div class="row g-3">
             <div class="col-sm-6">
